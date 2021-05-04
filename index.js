@@ -1,4 +1,5 @@
 const express = require("express");
+const app = express();
 const categories = require("./routes/categories");
 const listings = require("./routes/listings");
 const listing = require("./routes/listing");
@@ -11,7 +12,6 @@ const expoPushTokens = require("./routes/expoPushTokens");
 const helmet = require("helmet");
 const compression = require("compression");
 const config = require("config");
-const app = express();
 
 app.use(express.static("public"));
 app.use(express.json());
